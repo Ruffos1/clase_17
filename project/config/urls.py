@@ -24,4 +24,7 @@ urlpatterns = [
     path("vista2/", views.segunda_vista),
     path("persona/<apellido>/<nombre>/", views.nombre),
     path("probando_templates/",views.probando_template ),
+    path("notas/", views.desafio),
+    path("promedio/", views.promedio),
+    
 ]

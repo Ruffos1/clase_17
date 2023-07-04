@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mis Notas</h1>
+    
+    <div> 
+        <h4>Primer Trimestre</h4>
+        <ul>
+            {% for Nota in Notas%}
+                {% if Nota < 6 %}
+                   <li style="list-style: none;">{{Nota}} = Mala Nota</li>
+                   {% else %}
+                   <li style="list-style: none;"> Prueba 1: {{ Nota }}</li>
+                   
+                {%endif%}
+            {%endfor%}
+        </ul>
+    </div>
+</body>
+</html>

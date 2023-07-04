@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promedio de tus Notas</h1>
+    < <ul>
+        {% for Nota in Notas%}
+               <li style="list-style: none;"> Notas: {{ Nota }}</li>
+        {%endfor%}
+        <h3>Promedio = {{ Promedio }}</h3>
+    </ul>
+</body>
+</html>
