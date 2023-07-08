@@ -1,0 +1,12 @@
+{% extends 'Home/base.html' %}
+
+    
+    {% block CONTENIDO %}
+        {% for cliente in Clientes %}
+            <p>{{ cliente.nombre }} </p>
+            <p> {{ cliente.apellido }}</p>
+            <p> {{ cliente.pais_origen_id }}</p>
+        {% endfor %}
+        <a href="{% url "Home:Home"%}"> Volver al Menu</a>
+    {% endblock CONTENIDO %}
+ 
