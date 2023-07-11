@@ -1,0 +1,25 @@
+{% extends "Home/base.html" %}
+{% block TITULO %}
+  Buscar Cliente
+{% endblock TITULO %}
+
+{% block CONTENIDO %}
+<div>
+    {% for cliente in cliente_nombre %}
+       <h2>{{ cliente.nombre }}</h2>
+       <p>{{ cliente.apellido }}</p>
+       <p>{{ cliente.nacimiento }}</p>
+    {% endfor %}
+    <h3>Cliente Nacidos despues del 2000</h3>
+    {% for cliente in cliente_nacimiento %}
+       <p> {{ cliente }}</p>
+    {% endfor %}
+    <h2>Clientes sin pais</h2>
+    {% for cliente in sin_pais %}
+       <p> {{ cliente }}</p>
+    {% endfor %}
+
+</div>
+
+<a href="{% url "Home:Home"%}"> Volver al Menu</a>
+{% endblock CONTENIDO %}
